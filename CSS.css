@@ -1,46 +1,91 @@
 body {
-    background-color: rgb(203 213 225);
+    background-color: rgb(244, 208, 78);
 }
-div.main {
-    background-color: white;
-    height: 499px;
-    width: 320px;
-    border-radius: 20px;
+.center {
     margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 }
-div.text {
-    width: 288px;
-    margin-top: 2px;
-    margin: auto;
+div.main {
+    background-color: white;
+    height: 522px;
+    width: 384px;
+    border-radius: 20px;
+    box-shadow: 10px 10px black;
 }
-img {
-    width: 288px;
-    height: auto;
-    position: relative;
-    margin: 16px 16px 0px 16px;
-    border-radius: 10px;
-}
-p {
-    margin-left: 16px;
-    margin-right: 16px;
-    font-family: Outfit;
-    text-align: center;
+div.main:hover {
+    box-shadow: 20px 20px black;
 }
 
-p#txt1 {
-    color: rgb(15 23 42); 
-    font-size: 22px;
-    font-weight: bold;
-    line-height: 120%;
+#image {
+    width: 336px;
+    height: auto;
+    border-radius: 10px;
+    margin: 24px;
 }
-p#txt2 {
-    color: rgb(100 116 139);
-    font-size: 15px;
-    line-height: 140%;
+#content_container {
+    border-radius: 10px;
+    width: 336px;
+    margin: 0px 24px 24px 24px;
+    display: grid;
+    grid-template-rows: 29px 21px 36px 72px 32px;
+    row-gap: 12px;
+}
+#content_container> div {
+    display: grid;
+    align-items: center;
+}
+#content_container> div > p {
+    margin: 0;
+}
+#tag {
+    width: 62px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    background-color: rgb(244, 208, 78);
+    display: grid;
+    align-items: center;
+}
+#tag>p {
+    margin: 0;
+    text-align: center;
+}
+#publisher {
+    display: grid;
+    grid-template-columns: 32px 85px;
+    column-gap: 12px;
+}
+#publisher > img {
+    width: 32px;
+    height: auto;
+}
+.text_preset3 {
+    font-family: Figtree;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    font-weight: 500;
+}
+.text_preset2 {
+    font-family: Figtree;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    font-weight: 500;
+}
+.text_preset1 {
+    font-family: Figtree;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    font-weight: 800;
+}
+.bold {
+    font-weight: 800;
+}
+.gray500 {
+    color: rgb(107, 107, 107);
 }
