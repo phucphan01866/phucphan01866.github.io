@@ -1,88 +1,88 @@
 body {
-    margin : 0;
-    background-color: white;
-}
-a {
-    text-decoration: none;
-}
-a > p:hover {
-    color: black;
-}
-a > p {
-    color: rgb(100, 100, 100);
-}
-header {
-    height: 100px;
-    margin: none;
-    display: flex;
-    flex-direction:row;
-    font-family: 'Playwrite BE VLG';
-    position: fixed;
-    
-}
-.header-left {
-    width: 75%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.header-right {
-    width: 25%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.header-sub {
-    height: 100%;
-    width: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0px 2.5%;
-    font-size: 125%;
-    font-weight: bold;
+    margin: 0;
+    background-color: rgb(212, 185, 185);
 
 }
-.logo {
-    margin-left: 4dvw;
-    margin-right: 2.5%;
-    font-size: 200%;
-    font-weight: bolder;
+
+a {
+    text-decoration: none;
+    color: black;
 }
-.header-btn {
-    font-family: "Playwrite BE VLG";
-    background: none;
-    font-size: 150%;
-    font-weight: bolder;
-    width: 15dvw;
-    height: 65%;
-    border: 2px solid black;
-    border-radius: 90px;
-    cursor: pointer;
+
+hr#header {
+    margin: 0 auto;
+    width: 88%;
+    clear: both;
 }
-.main-container {
-    height: 85dvh;
+
+header {
     width: 100%;
-    background-color: antiquewhite;
+    height: 12dvh;
+    position: fixed;
+    top: 0;
+}
+
+header>div {
+    height: 100%;
+}
+
+header>#left {
+    float: left;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 }
-#main-img {
-    margin-top: 2%;
-    width: 40dvw;
+
+header>#left>div {
+    margin-right: 2dvw;
+    height: 40%;
+    display: flex;
+    align-items: flex-end;
+}
+header>div>div>a {
+    font-family: 'Roboto';
+    margin-bottom: none;
+    font-size: larger;
+}
+
+header>#left>div#logo {
+    margin-left: 5dvw;
+    margin-right: 4dvw;
+    height: 70%;
+}
+
+header>#left>div#logo>a {
+    font-family: 'Playwrite BE VLG';
+    font-size: xx-large;
+}
+
+header>#right {
+    float: right;
+    display: flex;
+    align-items: center;
+}
+
+header>#right>#start>a {
+    padding: 12px 20px;
+    border: 2px solid black;
+    border-radius: 19%/50%;
+    float: right;
+    margin-top: 1dvh;
+    margin-right: 5dvw;
+}
+
+#content {
+    margin-top: 20dvh;
+}
+
+#content>.container>img {
+    margin: auto;
+    display: block;
+    width: 50%;
     height: auto;
 }
-.main-container>.text-box {
-    font-family: "Inter";
+#content>.container>.textbox {
     text-align: center;
-    font-size: 400%;
-    font-weight: bolder;
-    margin-top: 1%;
-}
-.main-container>.text-box>p {
-    margin-top: 0%;
-    margin-bottom: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
