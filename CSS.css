@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(203 213 225);
+}
+div {
+    background-color: white;
+    height: 499px;
+    width: 320px;
+    margin: 105px auto;
+    border-radius: 20px;
+    overflow-y: hidden;
+}
+div.text {
+    width: 288px;
+    margin-top: 2px;
+}
+img {
+    width: 288px;
+    height: auto;
+    position: relative;
+    margin: 16px 16px 0px 16px;
+    border-radius: 10px;
+}
+p {
+    margin-left: 16px;
+    margin-right: 16px;
+    font-family: Outfit;
+    text-align: center;
+}
+
+p#txt1 {
+    color: rgb(15 23 42); 
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 120%;
+}
+p#txt2 {
+    color: rgb(100 116 139);
+    font-size: 15px;
+    line-height: 140%;
+}
