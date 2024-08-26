@@ -12,123 +12,32 @@
       href="./images/favicon-32x32.png"
     />
 
+    <title>Frontend Mentor | Product preview card component</title>
+
     <link rel="stylesheet" href="CSS.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <div class="main center">
-      <div id="name_and_description">
-        <img src="assets\images\image-omelette.jpeg" alt="" />
-        <p class="h1">Simple Omelette Recipe</p>
-        <p class="descript">
-          An easy and quick dish, perfect for any meal. This classic omelette
-          combines beaten eggs cooked to perfection, optionally filled with your
-          choice of cheese, vegetables, or meats.
+    <div id="maincard" class="center">
+      <img id="mobile_img" src="images\image-product-mobile.jpg" alt="" />
+      <img id="desktop_img" src="images\image-product-desktop.jpg" alt="" />
+      <div id="text_content">
+        <p class="T1">PERFUME</p>
+        <p class="T2">Gabrielle Essence Eau De Parfum</p>
+        <p class="T3">
+          A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.
         </p>
-      </div>
-      <div id="prepare_time">
-        <p class="h3">Preparation time</p>
-        <ul>
-          <li>
-            <p><b>Total: </b>Approximately 10 minutes</p>
-          </li>
-          <li>
-            <p><b>Preparation: </b>5 minutes</p>
-          </li>
-          <li>
-            <p><b>Cooking: </b>5 minutes</p>
-          </li>
-        </ul>
-      </div>
-      <div id="ingredient">
-        <p class="h2">Ingredients</p>
-        <ul>
-          <li><p>2-3 large eggs</p></li>
-          <li><p>Salt, to taste</p></li>
-          <li><p>Pepper, to taste</p></li>
-          <li><p>1 tablespoon of butter or oil</p></li>
-          <li>
-            <p>
-              Optional fillings: cheese, diced vegetables, cooked meats, herbs
-            </p>
-          </li>
-        </ul>
-      </div>
-      <div id="instruction">
-        <p class="h2">Instructions</p>
-        <ol>
-          <li>
-            <span
-              ><b>Beat the eggs:</b> In a bowl, beat the eggs with a pinch of
-              salt and pepper until they are well mixed. You can add a
-              tablespoon of water or milk for a fluffier texture.</span
-            >
-          </li>
-          <li>
-            <span
-              ><b>Heat the pan:</b> Place a non-stick frying pan over medium
-              heat and add butter or oil.</span
-            >
-          </li>
-          <li>
-            <span
-              ><b>Cook the omelette:</b> Once the butter is melted and bubbling,
-              pour in the eggs. Tilt the pan to ensure the eggs evenly coat the
-              surface.</span
-            >
-          </li>
-          <li>
-            <span
-              ><b>Add fillings (optional):</b> When the eggs begin to set at the
-              edges but are still slightly runny in the middle, sprinkle your
-              chosen fillings over one half of the omelette.</span
-            >
-          </li>
-          <li>
-            <span
-              ><b>Fold and serve:</b> As the omelette continues to cook,
-              carefully lift one edge and fold it over the fillings. Let it cook
-              for another minute, then slide it onto a plate.</span
-            >
-          </li>
-          <li>
-            <span
-              ><b>Enjoy:</b> Serve hot, with additional salt and pepper if
-              needed.</span
-            >
-          </li>
-        </ol>
-      </div>
-      <div id="nutrition">
-        <p class="h2">Nutrition</p>
-        <p style="padding: 9px 0px 15px 0px;">
-          The table below shows nutritional values per serving without the
-          additional fillings.
-        </p>
-        <table>
-          <tr>
-            <td>Calories</td>
-            <td style="font-weight: 700; color: hsl(14, 45%, 36%)">277kcal</td>
-          </tr>
-          <tr>
-            <td>Carbs</td>
-            <td style="font-weight: 700; color: hsl(14, 45%, 36%)">0g</td>
-          </tr>
-          <tr>
-            <td>Protein</td>
-            <td style="font-weight: 700; color: hsl(14, 45%, 36%)">20g</td>
-          </tr>
-          <tr>
-            <td>Fat</td>
-            <td style="font-weight: 700; color: hsl(14, 45%, 36%)">22g</td>
-          </tr>
-        </table>
+        <div id="price">
+          <p class="price1">$149.99</p>
+          <p class="price2"><del>$169.99</del></p>
+        </div>
+        <button id="Addtocart"><img src="images\icon-cart.svg" alt=""><p>Add to Cart</p></button>
       </div>
     </div>
   </body>

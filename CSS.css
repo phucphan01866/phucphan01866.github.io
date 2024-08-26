@@ -1,168 +1,195 @@
+* {
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
 body {
     background-color: hsl(30, 54%, 90%);
 }
+
 .center {
-    margin: 0px auto;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-div.main {
+#maincard {
     background-color: hsl(0, 0%, 100%);
-    width: 740px;
-    height: min-content;
-    border-radius: 30px;
-    display: grid;
-    row-gap: 64px;
-    padding: 42px;
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    padding: 0px;
+    overflow: hidden;
+
+    #mobile_img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    #desktop_img {
+        width: 50%;
+        height: auto;
+        display: none;
+    }
+
+    #text_content {
+        margin: 4px 0px;
+        padding: 24px;
+        > * {
+            margin-top: 20px;
+        }
+
+        .T1 {
+            margin-top: 0px;
+            font-family: Montserrat;
+            font-weight: 500;
+            font-size: 14px;
+            color: hsl(228, 12%, 48%);
+            letter-spacing: 5px;
+        }
+
+        .T2 {
+            
+            font-family: Fraunces;
+            font-weight: 700;
+            font-size: 30px;
+            color: hsl(212, 21%, 14%);
+        }
+
+        .T3 {
+            font-family: Montserrat;
+            font-weight: 500;
+            font-size: 14px;
+            color: hsl(228, 12%, 48%);
+            line-height: 1.5;
+        }
+        #price {
+            display: flex;
+            height: min-content;
+            .price1 {
+                font-family: Fraunces;
+                font-weight: 700;
+                font-size: 30px;
+                color: hsl(158, 36%, 37%);
+            }
+            .price2 {
+                display: flex;
+                align-items: center;
+                margin-left: 24px;
+                font-family: Montserrat;
+                font-weight: 500;
+                font-size: 14px;
+                color: hsl(228, 12%, 48%);
+            }
+        }
+        #Addtocart {
+            background-color: hsl(158, 36%, 37%);
+            border-radius: 8px;
+            width: 100%;
+            height: 44px;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                height: 40%;
+                width: auto
+            }
+            p {
+                color: hsl(0, 0%, 100%);
+                font-family: Montserrat;
+                font-size: 14px;
+                font-weight: 700;
+                margin-left: 3%;
+            }
+        }
+        #Addtocart:hover {
+            background-color: hsl(212, 21%, 14%);
+            cursor: pointer;
+            transition-duration: 200ms;
+        }
+    }
 }
 
-img {
-    width: 100%;
-    height: 339px;
-    border-radius: 12px;
-    margin: 0px;
-    display: block;
-}
+@media(min-width: 48em) {
+    #maincard {
+        display: flex;
+        flex-direction: row;
+        width: 615px;
+        height: auto;
+        #mobile_img {
+            display: none;
+        }
+        #desktop_img {
+            display: block;
+        }
 
-#name_and_description {
-    display: grid;
-}
-#name_and_description > .h1 {
-    margin: 46px 0px 0px 0px;
-}
-#name_and_description > .descript {
-    margin: 25px 0px 0px 0px;
-}
-
-p {
-    font-family: 'Outfit';
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0px;
-    font-weight: 400;
-    color: hsl(30, 10%, 34%);
-    margin: 0px;
-}
-
-li {
-    font-family: 'Outfit';
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0px;
-    font-weight: 400;
-    color: hsl(30, 10%, 34%);
-    margin: 0px;
-}
-
-#prepare_time {
-    padding-left: 26px;
-}
-#ingredient {
-    margin: 0px;
-}
-
-div > ul{
-    margin: 0px;
-    padding-top: 9px;
-}
-
-div > ul > li {
-    margin-top: 6px;
-    line-height: 2;
-}
-
-div > ul > li::marker {
-    color: hsl(332, 51%, 32%);
-}
-
-div > ol{
-    margin: 0px;
-    padding-top: 9px;
-    padding-left: 26px;
-}
-
-div > ol > li {
-    margin-top: 6px;
-    line-height: 1.5;
-    list-style-position: outside;
-}
-div > ol > li > span {
-    position: relative;
-    left: 20px;
+        #text_content {
+            width: 275px;
+            margin: 6px 0px;
+            padding: 35px;
+            > * {
+                margin-top: 30px;
+            }
+            .T2 {
+                font-size: 30px;
+            }
+            .T3 {
+                line-height: 1.8;
+                font-size: 14px;
+            }
+            #price {
+                .price1 {
+                    font-size: 30px;
+                }
+                .price2 {
+                     font-size: 14px;
+                }
+            }
+            #Addtocart {
+                background-color: hsl(158, 36%, 37%);
+                border-radius: 8px;
+                width: 100%;
+                height: max-content;
+                padding: 14px 56px;
+                img {
+                    height: 40%;
+                    width: auto
+                }
+                p {
+                    color: hsl(0, 0%, 100%);
+                    font-family: Montserrat;
+                    font-size: 14px;
+                    font-weight: 700;
+                    margin-left: 3%;
+                }
+            }
+        }
+    }
 }
 
 
-
-div > ol > li::marker {
-    color: hsl(332, 51%, 32%);
+.Dark_cyan {
+    background-color: hsl(158, 36%, 37%);
 }
 
-table {
-    width: 100%;
-    padding: 0px 18px;
+.Cream {
+    background-color: hsl(30, 30%, 92%);
 }
 
-td {
-    font-family: 'Outfit';
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0px;
-    font-weight: 400;
-    color: hsl(30, 10%, 34%);
-    margin: 0px;
-    
-    height: 48px;
+.Very_dark_blue {
+    background-color: hsl(212, 21%, 14%);
 }
 
-.h1 {
-    color: hsl(24, 5%, 18%);
-    font-family: 'Young Serif';
-    font-size: 48px;
-    line-height: 1;
+.Dark_grayish_blue {
+    background-color: hsl(228, 12%, 48%);
 }
-
-.h2 {
-    color: hsl(14, 45%, 36%);
-    font-family: 'Young Serif';
-    font-size: 34px;
-    line-height: 1;
-    margin-bottom: 9px;
-}
-
-.h3 {
-    color: hsl(332, 51%, 32%);
-    font-size: 22px;
-    line-height: 1;
-    font-weight: 600;
-}
-
-.bold {
-    font-weight: 600;
-}
-.bolder {
-    font-weight: 700;
-} 
 
 .White {
     background-color: hsl(0, 0%, 100%);
-}
-.Stone100 {
-    background-color: hsl(30, 54%, 90%);
-}
-.Stone150 {
-    background-color: hsl(30, 18%, 87%);
-}
-.Stone600 {
-    background-color: hsl(30, 10%, 34%);
-}
-.Stone900 {
-    background-color: hsl(24, 5%, 18%);
-}
-.Brown900 {
-    background-color: hsl(14, 45%, 36%);
-}
-.Rose800 {
-    background-color: hsl(332, 51%, 32%);
-}
-.Rose50 {
-    background-color: hsl(330, 100%, 98%);
 }
