@@ -11,33 +11,66 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
-    <title>Frontend Mentor | Product preview card component</title>
-
-    <link rel="stylesheet" href="CSS.css" />
+    <link rel="stylesheet" href="styles.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap"
       rel="stylesheet"
     />
+
+    <title>Frontend Mentor | Four card feature section</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
   </head>
   <body>
-    <div id="maincard" class="center">
-      <img id="mobile_img" src="images\image-product-mobile.jpg" alt="" />
-      <img id="desktop_img" src="images\image-product-desktop.jpg" alt="" />
-      <div id="text_content">
-        <p class="T1">PERFUME</p>
-        <p class="T2">Gabrielle Essence Eau De Parfum</p>
-        <p class="T3">
-          A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.
+    <div id="main" class="center">
+      <div id="header">
+        <p class="H1 darker">Reliable, efficient delivery</p>
+        <p class="H1 bolder darker">Powered by Technology</p>
+        <p id="description">
+          Our Artificial Intelligence powered tools use millions of project data
+          points to ensure that your project is successful
         </p>
-        <div id="price">
-          <p class="price1">$149.99</p>
-          <p class="price2"><del>$169.99</del></p>
+      </div>
+      <div id="card_container">
+        <div class="Post1 card border_cyan">
+          <p class="H1">Supervisor</p>
+          <p>Monitors activity to identify project roadblocks</p>
+          <img src="images\icon-supervisor.svg" alt="" />
         </div>
-        <button id="Addtocart"><img src="images\icon-cart.svg" alt=""><p>Add to Cart</p></button>
+        <div class="Post2 card border_red">
+          <p class="H1">Team Builder</p>
+          <p>
+            Scans our talent network to create the optimal team for your project
+          </p>
+          <img src="images\icon-team-builder.svg" alt="" />
+        </div>
+        <div class="Post3 card border_yellow">
+          <p class="H1">Karma</p>
+
+          <p>
+            Regularly evaluates our talent to ensure quality
+          </p>
+          <img src="images\icon-karma.svg" alt="" />
+        </div>
+        <div class="Post4 card border_blue">
+          <p class="H1">Calculator</p>
+          <p>
+            Uses data from past projects to provide better delivery estimates
+          </p>
+          <img src="images\icon-calculator.svg" alt="" />
+        </div>
       </div>
     </div>
   </body>
