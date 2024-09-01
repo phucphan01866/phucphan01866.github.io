@@ -1,177 +1,197 @@
-.center {
-  margin: 0px auto;
+:root {
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-grayish-blue-alpha: hsla(217, 19%, 35%, 0.7);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+  --weight500: 500;
+  --weight600: 600;
 }
 
 * {
-  font-family: Poppins;
-  font-size: 15px;
-  font-weight: 200;
-  line-height: 1.5;
-  color: hsl(229, 6%, 66%);
-  margin: 0px;
-  padding: 0px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 13px;
+  color: var(--Moderate-violet);
+
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  box-sizing: border-box;
 }
 
-#main {
-  margin: 5% auto;
-  width: 375px;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: auto auto;
-  row-gap: 44px;
-  justify-items: center;
-}
-
-#header {
-  width: 85%;
-}
-
-#header p {
-  text-align: center;
-  font-size: 16px;
-  margin: 22px auto;
-}
-
-#header .H1 {
-  font-size: 25px;
-  margin: 0px auto;
-}
-
-#card_container {
-  width: 85%;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: auto auto auto auto;
-  row-gap: 22px;
-}
-
-.card {
-  height: 200px;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: min-content min-content auto;
-  padding: 16px;
-  border-radius: 5px;
-  box-shadow: 0px 7px 15px -10px hsl(180, 62%, 55%);
-}
-
-.card .H1 {
-  font-size: 22px;
-  font-weight: 600;
-  color: hsl(234, 12%, 34%);
-  margin-bottom: 8px;
-}
-
-.card img {
-  display: block;
-  width: 25%;
+body {
+  width: 100%;
   height: auto;
-  justify-self: flex-end;
-  align-self: flex-end;
-  margin-bottom: 8px;
-}
-
-.border_cyan {
-  border-top: 5px solid hsl(180, 62%, 55%);
-}
-
-.border_red {
-  border-top: 5px solid hsl(0, 78%, 62%);
-}
-
-.border_yellow {
-  border-top: 5px solid hsl(34, 97%, 64%);
-}
-
-.border_blue {
-  border-top: 5px solid hsl(212, 86%, 64%);
-}
-
-@media (min-width: 48em) {
-  #main {
-    width: 100%;
-  }
-
-  #header {
-    width: 50%;
-  }
+  margin: auto;
 
   #card_container {
-    width: 75%;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
-    column-gap: 26px;
+    width: 90%;
+    height: 0px auto;
+
+    display: grid;
+    row-gap: 5dvh;
+    margin: 10dvh auto 10dvh auto;
+
+    .card {
+      padding: 1.5em 2em 2em 2em;
+      display: grid;
+      grid-template-columns: min-content 1fr;
+      grid-template-rows: repeat(3, min-content) repeat(1, 1fr);
+      column-gap: 1.5em;
+      border-radius: 10px;
+      box-shadow: 0em 3em 5em -3em var(--Very-dark-grayish-blue-alpha);
+
+      .avatar {
+        grid-column: 1/2;
+        grid-row: 1/3;
+        width: 3em;
+        height: auto;
+        border-radius: 50%;
+      }
+
+      .name {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        font-size: 1.2em;
+        font-weight: var(--weight600);
+        align-self: center;
+      }
+
+      .status {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        align-self: center;
+      }
+
+      .feedback {
+        grid-column: 1/3;
+        grid-row: 3/4;
+        font-size: 1.5em;
+        line-height: 1.2;
+        font-weight: var(--weight600);
+        margin-top: 0.75em;
+      }
+
+      .quote {
+        grid-column: 1/3;
+        grid-row: 4/5;
+        line-height: 1.2;
+        margin-top: 1.5em;
+      }
+    }
+
+    .C1 {
+      background-color: var(--Moderate-violet);
+    }
+
+    .C2 {
+      background-color: var(--Very-dark-grayish-blue);
+    }
+
+    .C3 {
+      background-color: var(--White);
+    }
+
+    .C4 {
+      background-color: var(--Very-dark-blackish-blue);
+    }
+
+    .C5 {
+      background-color: var(--White);
+    }
+
+    .C1,
+    .C2,
+    .C4 {
+      .avatar {
+        border: 2px solid var(--Very-dark-grayish-blue)
+      }
+
+      .name {
+        color: var(--White);
+      }
+
+      .status {
+        color: var(--Light-gray)
+      }
+
+      .feedback {
+        color: var(--White);
+      }
+
+      .quote {
+        color: var(--Light-gray)
+      }
+    }
+
+    .C3,
+    .C5 {
+      .avatar {
+        border: 2px solid var(--Very-dark-grayish-blue)
+      }
+
+      .name {
+        color: var(--Very-dark-grayish-blue);
+      }
+
+      .status {
+        color: rgb(176, 178, 181);
+      }
+
+      .feedback {
+        color: var(--Very-dark-grayish-blue);
+      }
+
+      .quote {
+        color: rgb(176, 178, 181);
+      }
+
+    }
   }
 
-  .Post1 {
-    grid-row: 1/3;
-    grid-column: 1/2;
-    align-self: center;
+  @media (min-width: 48em) {
+    #card_container {
+      width: 85%;
+      height: auto;
+      display: grid;
+      row-gap: 2em;
+      column-gap: 2em;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+
+      .C1 {
+        grid-column: 1/3;
+        grid-row: 1/2;
+      }
+
+      .C2 {
+        grid-column: 3/4;
+        grid-row: 1/2;
+      }
+
+      .C3 {
+
+        grid-column: 1/2;
+        grid-row: 2/3;
+      }
+
+      .C4 {
+        grid-column: 2/4;
+        grid-row: 2/3;
+      }
+
+      .C5 {
+        grid-column: 4/5;
+        grid-row: 1/3;
+      }
+    }
   }
-
-  .Post2 {
-    grid-row: 1/2;
-    grid-column: 2/3;
-    align-self: center;
-  }
-
-  .Post3 {
-    grid-row: 2/3;
-    grid-column: 2/3;
-    align-self: center;
-  }
-
-  .Post4 {
-    grid-row: 1/3;
-    grid-column: 3/4;
-    align-self: center;
-  }
 }
 
-.only_mobile {
-  display: block;
-}
-
-.only_desktop {
-  display: none;
-}
-
-.bold {
-  font-weight: 400;
-}
-
-.bolder {
-  font-weight: 600;
-}
-
-.darker {
-  color: hsl(234, 12%, 34%);
-}
-
-.Red {
-  background-color: hsl(0, 78%, 62%);
-}
-
-.Cyan {
-  background-color: hsl(180, 62%, 55%);
-}
-
-.Orange {
-  background-color: hsl(34, 97%, 64%);
-}
-
-.Blue {
-  background-color: hsl(212, 86%, 64%);
-}
-
-.Very_dark_blue {
-  background-color: hsl(234, 12%, 34%);
-}
-
-.Grayish_blue {
-  background-color: hsl(229, 6%, 66%);
-}
-
-.Very_light_gray {
-  background-color: hsl(0, 0%, 98%);
+.attribution {
+  text-align: center;
 }
