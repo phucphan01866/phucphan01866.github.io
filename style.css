@@ -1,0 +1,207 @@
+:root {
+    --neutralTomato: hsl(4, 100%, 67%);
+    --neutralLightRed: hsl(346, 100%, 66%);
+    --primaryDarkSlateGrey: hsl(234, 29%, 20%);
+    --primaryCharcoalGrey: hsl(235, 18%, 26%);
+    --primaryGrey: hsl(231, 7%, 60%);
+    --primaryWhite: hsl(0, 0%, 100%);
+    --normal: 400;
+    --bold: 700;
+    background-color: var(--primaryWhite);}
+
+* {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--primaryCharcoalGrey);
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: var(--bold);
+}
+
+button {
+    background-color: var(--primaryDarkSlateGrey);
+    border: none;
+    color: var(--primaryWhite);
+    font-weight: var(--bold);
+}
+& input, button {
+    width: 100%;
+    height: 3em;
+    border-radius: 0.4em;
+}
+& input {
+    padding-left: 1em;
+    border: 1.5px solid var(--primaryGrey);
+}
+.mainScreen {
+    width: 100%;
+    background-color: var(--primaryWhite);
+    & img {
+        width: 100%;
+        height: auto;
+    }
+    & p {
+        line-height: 1.5;
+    }
+    & .innerCard {
+        margin: 1em;
+        margin-top: 3em;
+        display: grid;
+        row-gap: 2em;
+        & ul {
+            display: grid;
+            row-gap: 1em;
+            margin: 1em 0em;
+            & li {
+                background-image: url(assets/images/icon-list.svg);
+                background-position: 0em;
+                background-repeat: no-repeat;
+                list-style-type: none;
+                padding-left: 2em;
+                min-height: 21px;
+                display: flex;
+                align-items: center;
+            }
+        }
+        & form {
+            display: grid;
+            row-gap: 1em;
+            & * {
+                display: block;
+            }
+            & label {
+                font-weight: var(--bold);
+                grid-row: 1/2;
+                grid-column: 1/2;
+            }
+            & .errorStatement {
+                grid-row: 1/2;
+                grid-column: 2/3;
+                justify-self: flex-end;
+                line-height: 1;
+                color: var(--neutralTomato);
+                display: none;
+            }
+            & input {
+                grid-row: 2/3;
+                grid-column: 1/3;
+                border: 1px solid var(--primaryGrey);
+                color: var(--primaryGrey);
+            }
+            & .errorInput {
+                border: 1.5px solid var(--neutralTomato);
+                color: var(--neutralTomato);
+            }
+            & input:focus {
+                outline: none;
+                border: 1.5px solid var(--primaryDarkSlateGrey);
+                color: var(--primaryDarkSlateGrey);
+            }
+            & button {
+                grid-row: 3/4;
+                grid-column: 1/3;
+                margin-bottom: 3em;
+            }
+        }
+    }
+}
+& .successScreen {
+    background-color: var(--primaryWhite);
+    padding: 0em 6%;
+    width: 100%;
+    height: 100dvh;
+    display: grid;
+    grid-template-rows: 1fr auto auto 2fr;
+    row-gap: 1.5em;
+    & img {
+        align-self: flex-end;
+    }
+    & p {
+        line-height: 1.5;
+    }
+    & button {
+        align-self: flex-end;
+        margin-bottom: 2em;
+    }
+}
+@media (min-width: 40em) {
+    :root {
+        background-color: var(--primaryCharcoalGrey);
+    }
+    button:hover {
+        background-image: linear-gradient(135deg, var(--neutralLightRed),var(--neutralTomato));
+    }
+    .mainScreen {
+        min-width: 40em;
+        max-width: 55em;
+        border-radius: 1.4em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        & img {
+            width: 100%;
+            height: auto;
+            padding: 1em;
+            grid-row: 1/2;
+            grid-column: 2/3;
+        }
+        & .innerCard {
+            align-self: center;
+            grid-row: 1/2;
+            grid-column: 1/2;
+            margin: 0em;
+            padding: 2em 2em;
+            row-gap: 1.5em;
+            & h1 {
+                align-self: flex-end;
+                font-size: 3em;
+            }
+            & p {
+                align-self: center;
+            }
+            & ul {
+                padding: 0em;
+                margin: 0em;
+            }
+            & form {
+                margin-top: 0.5em;
+                display:grid;
+                row-gap: 1em;
+            }
+        }
+    }
+    & .successScreen {
+        width: 33em;
+        height: auto;
+        aspect-ratio: 1/1;
+        padding: 4em;
+        border-radius: 2em;
+        row-gap: 1.5em;
+        grid-template-rows: auto;
+        & h1 {
+            font-size: 4em;
+        }
+        & button {
+            align-self: flex-start;
+            margin: 0em;
+        }
+    }
+}
+.hidden {
+    display: none;
+}
+.show {
+    display: block !important;
+}
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
