@@ -1,4 +1,70 @@
-# React + TypeScript + Vite
+# phucphan01866.github.io
+
+A React + TypeScript + Vite personal website.
+
+## Development
+
+Install dependencies:
+```bash
+npm install
+```
+
+Run development server:
+```bash
+npm run dev
+```
+
+Build for production:
+```bash
+npm run build
+```
+
+Preview production build:
+```bash
+npm run preview
+```
+
+## Deployment to GitHub Pages
+
+This site is automatically deployed to GitHub Pages when changes are pushed to the `main` branch.
+
+### Setup Instructions
+
+1. **Enable GitHub Pages in your repository:**
+   - Go to your repository on GitHub
+   - Navigate to **Settings** > **Pages**
+   - Under "Build and deployment", select **Source: GitHub Actions**
+
+2. **Push changes to the main branch:**
+   ```bash
+   git push origin main
+   ```
+
+3. **The GitHub Actions workflow will automatically:**
+   - Install dependencies
+   - Build the project
+   - Deploy to GitHub Pages
+
+4. **Access your site:**
+   - Your site will be available at: `https://phucphan01866.github.io/`
+
+### Manual Deployment
+
+If you need to trigger a deployment manually:
+- Go to **Actions** tab in your repository
+- Select the "Deploy to GitHub Pages" workflow
+- Click "Run workflow"
+
+## Technology Stack
+
+- React 19
+- TypeScript
+- Vite 7
+- Tailwind CSS 4
+- Headless UI
+- Heroicons
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
